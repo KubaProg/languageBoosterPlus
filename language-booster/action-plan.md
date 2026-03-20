@@ -28,12 +28,12 @@ Stworzymy komponent `UserProfileComponent`, który pozwoli użytkownikowi ustawi
 
 ## Kroki Realizacji:
 
-### Krok 1: Przygotowanie i Konfiguracja
+### Krok 1: Przygotowanie i Konfiguracja (ZAKOŃCZONE ✅)
 *   Import `ReactiveFormsModule` do projektu.
 *   Dodanie niezbędnych modułów PrimeNG.
 *   Stworzenie szkieletu komponentu `UserProfileComponent`.
 
-### Krok 2: Definicja Silnie Typowanego Formularza
+### Krok 2: Definicja Silnie Typowanego Formularza (DO ZROBIENIA ⏳)
 *   Stworzenie interfejsu/typu dla danych formularza.
 *   Inicjalizacja `FormGroup` z użyciem `NonNullableFormBuilder`.
 *   Zrozumienie różnicy między `FormControl` a `FormControl<string>`.

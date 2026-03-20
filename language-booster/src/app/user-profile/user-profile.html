@@ -1,0 +1,40 @@
+<form [formGroup]="form" style="max-width: 400px; margin: 20px auto; display: flex; flex-direction: column; gap: 15px;">
+  <h2>Profil Ucznia</h2>
+
+  <div style="display: flex; flex-direction: column;">
+    <label for="username">Nazwa użytkownika</label>
+    <input pInputText id="username" formControlName="username" placeholder="Wpisz imię...">
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <label for="email">Email</label>
+    <input pInputText id="email" formControlName="email" placeholder="twoj@email.com">
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <label for="level">Poziom Języka</label>
+    <p-select [options]="levels" formControlName="level" optionLabel="label" optionValue="value" placeholder="Wybierz poziom"></p-select>
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <label for="dailyGoal">Dzienny cel (minuty)</label>
+    <p-inputNumber id="dailyGoal" formControlName="dailyGoal" [showButtons]="true" [min]="0" [max]="120" suffix=" min"></p-inputNumber>
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <label for="studyTime">Godzina nauki (6:00 - 23:00)</label>
+    <p-datePicker id="studyTime" formControlName="studyTime" [timeOnly]="true" hourFormat="24"></p-datePicker>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <p-checkbox id="notifications" formControlName="notifications" [binary]="true"></p-checkbox>
+    <label for="notifications">Chcę otrzymywać powiadomienia</label>
+  </div>
+
+  <p-button label="Zapisz profil" [disabled]="form.invalid"></p-button>
+
+  <div style="margin-top: 20px; padding: 10px; ; border: 1px solid #ccc;">
+    <p>Valid: {{ form.valid }}</p>
+    <pre>{{ form.value | json }}</pre>
+  </div>
+</form>
